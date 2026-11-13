@@ -2,8 +2,8 @@
 ## Title: Tidy Roll
 ## Notes: Clean, compact loot roll bars: need, greed, disenchant and pass, who picked what, and the winner.
 ## Version: 1.0.1
-## IconTexture: Interface\AddOns\TidyRolls\media\logo.png
+## IconTexture: Interface\AddOns\TidyRoll\media\logo.png
 ## SavedVariables: TidyRollsDB
 ## X-License: MIT
 
-TidyRolls.lua
+TidyRoll.lua

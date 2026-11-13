@@ -2,7 +2,7 @@
 
 ## 1.0.1
 
-- Renamed to **Tidy Roll**. The folder and the `/tidyrolls` command stay the same, so your settings carry over.
+- Renamed to **Tidy Roll**, folder included. Delete the old `TidyRolls` folder from your AddOns if it is still there. Your saved bar position does not carry over: drag the bars back with `/tidyrolls unlock` if you had moved them.
 
 ## 1.0.0
 

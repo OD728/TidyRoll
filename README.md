@@ -11,7 +11,7 @@
 ## Install
 
 Download it from CurseForge, or copy this repository's files into a folder named
-`TidyRolls` inside `World of Warcraft\_forever_\Interface\AddOns\`.
+`TidyRoll` inside `World of Warcraft\_forever_\Interface\AddOns\`.
 
 ## Commands
 
@@ -25,7 +25,7 @@ Download it from CurseForge, or copy this repository's files into a folder named
 ## Options
 
 Size, width, stacking direction, how long finished bars stay, the Disenchant
-button, fonts and colors are all set at the top of `TidyRolls.lua`.
+button, fonts and colors are all set at the top of `TidyRoll.lua`.
 
 ## Changes
 

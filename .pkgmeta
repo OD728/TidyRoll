@@ -1,4 +1,4 @@
-package-as: TidyRolls
+package-as: TidyRoll
 
 ignore:
   - README.md

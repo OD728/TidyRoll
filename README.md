@@ -1,6 +1,6 @@
-# Tidy Rolls
+# Tidy Roll
 
-![Tidy Rolls](art/curseforge-logo.png)
+![Tidy Roll](art/curseforge-logo.png)
 
 **Clean, compact loot roll bars**, made for WoW: Forever.
 

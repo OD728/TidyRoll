@@ -1,4 +1,4 @@
--- Tidy Rolls
+-- Tidy Roll
 -- Group loot rolls as compact bars in Daylight UI's look:
 --   [item icon] [need] [greed] [disenchant] [pass] [==== item name ===== time]
 -- Hover the icon or bar for the item and who picked what. When the roll is
@@ -800,7 +800,7 @@ SlashCmdList.TIDYROLLS = function(msg)
         handle:SetSize(WIDTH, n * ROW_HEIGHT + (n - 1) * GAP)
         handle:Show()
         showSamples()
-        print("|cffffd100Tidy Rolls|r: drag the gold label above the bars, then type /tidyrolls lock.")
+        print("|cffffd100Tidy Roll|r: drag the gold label above the bars, then type /tidyrolls lock.")
     elseif msg == "lock" then
         handle:Hide()
         clearSamples()
@@ -855,7 +855,7 @@ function handlers.PLAYER_LOGIN()
     TidyRollsDB = TidyRollsDB or {}
     placeAnchor()
     if C_AddOns and C_AddOns.IsAddOnLoaded and C_AddOns.IsAddOnLoaded("XLoot_Group") then
-        print("|cffffd100Tidy Rolls|r: XLoot Group is on too, so Tidy Rolls stays off. Turn one of them off.")
+        print("|cffffd100Tidy Roll|r: XLoot Group is on too, so Tidy Roll stays off. Turn one of them off.")
         return
     end
     suppressDefault()

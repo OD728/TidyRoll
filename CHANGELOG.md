@@ -1,4 +1,8 @@
-# Tidy Rolls changelog
+# Tidy Roll changelog
+
+## 1.0.1
+
+- Renamed to **Tidy Roll**. The folder and the `/tidyrolls` command stay the same, so your settings carry over.
 
 ## 1.0.0
 

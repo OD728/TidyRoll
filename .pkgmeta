@@ -1,0 +1,6 @@
+package-as: TidyRolls
+
+ignore:
+  - README.md
+  - art
+  - CHANGELOG.md

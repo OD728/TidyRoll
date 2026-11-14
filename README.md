@@ -8,6 +8,8 @@
 - Counts on the buttons, and a tooltip listing who picked what, with roll numbers.
 - The winner is shown when the roll ends.
 
+![Tidy Roll in game](art/screenshot.png)
+
 ## Install
 
 Download it from CurseForge, or copy this repository's files into a folder named

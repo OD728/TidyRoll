@@ -689,15 +689,25 @@ end
 
 -- Who picked what, from the chat lines (when the game has no loot history).
 local CHAT = {}
+-- Translations may reorder the values with "%2$s"-style markers, so remember
+-- which value each capture is: argPos[i] = the value number of capture i.
 local function toPattern(fmt)
-    local p = fmt:gsub("%%%d*%$?s", "\1"):gsub("%%%d*%$?d", "\2")
+    local argPos, n = {}, 0
+    local p = fmt:gsub("%%(%d*)%$?([sd])", function(pos, t)
+        n = n + 1
+        argPos[n] = tonumber(pos) or n
+        return t == "s" and "\1" or "\2"
+    end)
     p = p:gsub("[%^%$%(%)%%%.%[%]%*%+%-%?]", "%%%0")
     p = p:gsub("\1", "(.+)"):gsub("\2", "(%%d+)")
-    return "^" .. p .. "$"
+    return "^" .. p .. "$", argPos
 end
 local function chatLine(global, kind, order)
     local fmt = _G[global]
-    if type(fmt) == "string" then CHAT[#CHAT + 1] = { pat = toPattern(fmt), kind = kind, order = order } end
+    if type(fmt) == "string" then
+        local pat, argPos = toPattern(fmt)
+        CHAT[#CHAT + 1] = { pat = pat, argPos = argPos, kind = kind, order = order }
+    end
 end
 -- Lines about you and about everyone first: "You won" would also read as "<name> won".
 chatLine("LOOT_ROLL_ALL_PASSED", "allpassed", "l")
@@ -721,8 +731,11 @@ chatLine("LOOT_ROLL_WON", "won", "nl")
 local function fromChat(msg)
     if issecret(msg) or type(msg) ~= "string" then return end
     for _, c in ipairs(CHAT) do
-        local a, b, d = msg:match(c.pat)
-        if a then
+        local caps = { msg:match(c.pat) }
+        if caps[1] then
+            local args = {}
+            for i, v in ipairs(caps) do args[c.argPos[i] or i] = v end
+            local a, b, d = args[1], args[2], args[3]
             local name, link, roll
             if c.order == "nl" then name, link = a, b
             elseif c.order == "l" then name, link = myName(), a

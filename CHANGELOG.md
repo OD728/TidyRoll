@@ -1,5 +1,9 @@
 # Tidy Roll changelog
 
+## 1.0.2
+
+- On clients in other languages, roll lines from chat are read correctly even when the translation puts the item before the player name.
+
 ## 1.0.1
 
 - Renamed to **Tidy Roll**, folder included. Delete the old `TidyRolls` folder from your AddOns if it is still there. Your saved bar position does not carry over: drag the bars back with `/tidyrolls unlock` if you had moved them.

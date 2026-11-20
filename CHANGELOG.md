@@ -1,5 +1,10 @@
 # Tidy Roll changelog
 
+## 1.0.3
+
+- Minor fixes.
+- The name in the AddOns list is now lavender, like the author's other addons.
+
 ## 1.0.2
 
 - On clients in other languages, roll lines from chat are read correctly even when the translation puts the item before the player name.

@@ -2,7 +2,7 @@
 
 ![Tidy Roll](art/curseforge-logo.png)
 
-**Clean, compact loot roll bars**, made for WoW: Forever.
+**WoW: Forever addon:** clean, compact loot roll bars.
 
 - Slim bars replace the game's roll frames: item icon, Need / Greed / Pass, and a timer bar.
 - Counts on the buttons, and a tooltip listing who picked what, with roll numbers.
